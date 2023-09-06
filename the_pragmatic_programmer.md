@@ -1,4 +1,5 @@
 # The Pragmatic Programmer, 20th Anniversary Edition - David Thomas, Andrew Hunt
+Each paragraph in the following summary is based on 1 subchapter, and therefore the topic should be easy to find in the book.
 
 ## Chapter 1
 There is no point in developing software unless you care about doing it well. A Pragmatic Programmer needs to constantly think and critique the work the do, and never run on auto-pilot. Such processes and time investments are repaid in the long term by having code that is easier to maintain. This can also help build trust in the team, which is important, as your team needs to be able to trust and rely upon you, and vise-versa. Another tool to build trust, is to take responsibility for everything you do - Provide solutions, not excuses. Before providing bad news, that something didn't work, think, is there something else that can be tried?
