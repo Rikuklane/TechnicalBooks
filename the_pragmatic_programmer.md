@@ -19,9 +19,9 @@ A good design is easier to change than bad design as well designed things adapt 
 
 To develop software reliably, and make it easier to understand and maintain then every piece of knowledge must have a single, unambiguous, authoritative representation within a system. This is the DRY(Don't Repeat Yourself) principle. The alternative is to have the same things expressed in *two* different places - which brings up the question *when do you forget, and not if*. DRY is about the duplication of _knowledge, of intent_, which also can possibly be expressed in two different ways (code, documentation, database). Though not all code duplication is knowledge duplication (e.g., functions for validating age or quantity), where the code is the same, but the knowledge is different. The code should not be commented with what the function does and what are its parameters as this knowledge already exists. The data structures also represent knowledge, and to not fall out with the DRY principle, they should also contain knowledge only once (E.g., if line _start_ and _end_ are variables, then length should be a function). In regards of API's it is a bit more complex, as both your code and the external entity will have to have the knowledge, and when changed, the other breaks. To deduplicate API it is possible to specify the API via a neutral format OR have something like OpenAPI generate the documentation for you. The hardest type of duplication to detect and handle is between different developers or projects, and can only be avoided by communication through standups, message threads, and peer reviews. Overall the environment that you should be trying to foster is the one, where it is easier to find and reuse existing stuff than write it yourself.
 
-Orthogonality is a critical concept if you want to produce systems that are easy to design, build, test, and extend. The term "Orthogonality" signifies independence or decoupling, and changes can be made without affecting the rest of the system. A non-orthogonal system is a helicopter, in which every change impacts all the other inputs. With orthogonality the effects between unrelated things are eliminated, productivity is gained (through less time needed for developing and testing), and risk is reduced (as when a module is sick, others are not affected).
+Orthogonality is a critical concept if you want to produce systems that are easy to design, build, test, document, and extend. The term "Orthogonality" signifies independence or decoupling, and changes can be made without affecting the rest of the system. A non-orthogonal system is a helicopter, in which every change impacts all the other inputs. With orthogonality the effects between unrelated things are eliminated, productivity is gained (through less time needed for developing and testing), and risk is reduced (as when a module is sick, others are not affected). Decouple your design from the real world, don't use phone number,or postal code as a customer identifier, as you should not rely on properties you can't control. The techniques to maintain orthogonality are to keep your code decoupled (Law of Demeter), avoid global data, and similar functions (Strategy pattern). Orthogonality is closely related to the DRY principle, where DRY tries to minimize duplication, and orthogonality to reduce the interdependency among the components.
 
-x
+There are ALWAYS more than one way to implement something, and usually more than one vendor available. If you rely heavily on some fact, you can almost guarantee that it _will_ change, but critical decisions aren't easily reversible around a project. There are no final decisions. Instead of carving decisions in stone, think of them more as being written in the sand at the beach. A big wave can come along and wipe them out at any time. To have easier reversibility, you should have flexible arcitecture: Hide third-party APIs behind your own abstraction layers, break your code into components (even if they are deployed on a single server) as it is a lot easier than splitting a monolithic application.
 
 ## Suggestions
 
@@ -30,6 +30,11 @@ x
   - The Mythicla Man-Month: Essays on Software Engineering
   - Peopleware: Productive Projects and Teams
   - Dinosaur Brains: Dealing with All Those Impossible People at Work
+
+### Read more about
+- the Decorator Pattern: adding functionality to functions without changing them.
+- Law of Demeter: Decoupling
+- Stategy pattern in design patterns
 
 ### Tips
 - Proofread your emails before you hit SEND and keep the format simple and clean.
