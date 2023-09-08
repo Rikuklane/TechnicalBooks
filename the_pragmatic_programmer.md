@@ -23,6 +23,8 @@ Orthogonality is a critical concept if you want to produce systems that are easy
 
 There are ALWAYS more than one way to implement something, and usually more than one vendor available. If you rely heavily on some fact, you can almost guarantee that it _will_ change, but critical decisions aren't easily reversible around a project. There are no final decisions. Instead of carving decisions in stone, think of them more as being written in the sand at the beach. A big wave can come along and wipe them out at any time. To have easier reversibility, you should have flexible arcitecture: Hide third-party APIs behind your own abstraction layers, break your code into components (even if they are deployed on a single server) as it is a lot easier than splitting a monolithic application.
 
+Prioritize development in the areas of the code, which define the system, and in which you have doubts and see bigger risks. You should take an incremental approach, where a part of every layer (UI, service, DB) is implemented, and use it as a tracer bullet to see whether everything works and you are on target. This approach makes it easier to progress, and make changes, while having something to demonstrate for customers. The idea behind tracer code is to get feedback early on, see whether it is missing, and make easy and quick changes to be on target. Tracer code is different from _prototyping_, because with a true _prototype_ you will throw away everything you lashed together and start on a clean sheetw, whereas with tracer code you build a trivial implementation, which will be added on in the future - the system will continue to work as with the first tracer code.
+
 ## Suggestions
 
 ### Books to read
