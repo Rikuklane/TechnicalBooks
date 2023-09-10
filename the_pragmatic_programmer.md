@@ -25,6 +25,10 @@ There are ALWAYS more than one way to implement something, and usually more than
 
 Prioritize development in the areas of the code, which define the system, and in which you have doubts and see bigger risks. You should take an incremental approach, where a part of every layer (UI, service, DB) is implemented, and use it as a tracer bullet to see whether everything works and you are on target. This approach makes it easier to progress, and make changes, while having something to demonstrate for customers. The idea behind tracer code is to get feedback early on, see whether it is missing, and make easy and quick changes to be on target. Tracer code is different from _prototyping_, because with a true _prototype_ you will throw away everything you lashed together and start on a clean sheetw, whereas with tracer code you build a trivial implementation, which will be added on in the future - the system will continue to work as with the first tracer code.
 
+Prototyping holds a pivotal role in software development, akin to crafting swift sketches on Post-it notes, enabling the refinement of ideas and the exploration of diverse design avenues. It emphasizes the value of generating throwaway prototypes as a means to gain vital insights, all while advocating the pragmatic readiness to discard prototypes that fail to efficiently serve their purpose. Knowing when to employ prototypes versus tracer bullets is essential: Prototypes are best suited for exploring novel concepts and ideas, while tracer bullets excel in areas where you have doubts or perceive higher risks, offering a tangible way to validate progress and gather early feedback for precise targeting of project goals.
+
+External and internal domain languages serve distinct purposes in software development. When tackling intricate domains where precise modeling is crucial, external domain languages come into play. These are either separate languages or adapted existing ones, designed to involve domain experts directly in the process. They excel in capturing complex concepts accurately. On the other hand, internal domain languages are embedded within general-purpose programming languages. They are your go-to choice for streamlining routine tasks within your codebase, effectively enhancing code quality and making it easier to maintain. The decision to use one over the other is contingent on the complexity of your domain and the extent to which direct domain expert involvement is needed.
+
 ## Suggestions
 
 ### Books to read
@@ -41,3 +45,13 @@ Prioritize development in the areas of the code, which define the system, and in
 ### Tips
 - Proofread your emails before you hit SEND and keep the format simple and clean.
 - 
+
+## Prompt for LLM generation
+I want you to do the following with the "The Pragmatic Programmer" subchapter "".
+
+I want you to bring out the key points as bullet points (minimum 5, maximum 8).
+
+The bullet points should include:
+- X
+
+After you have generated the bullet points. Only based on the bullet points, write a 5-8 sentence long section. The paragraph should straightforward, use words like "you" if possible, and not use words such as "subchapter", "chapter", "authors", and do not mention the books name nor the chapters name.
